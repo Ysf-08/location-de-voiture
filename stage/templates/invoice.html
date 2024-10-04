@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .invoice-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .invoice-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .invoice-details {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <h1 class="invoice-header">Facture</h1>
+        <div class="invoice-details">
+            <p><strong>Nom:</strong> {{ reservation.name }}</p>
+            <p><strong>Email:</strong> {{ reservation.email }}</p>
+            <p><strong>Voiture louée:</strong> {{ reservation.model }}</p>
+            <p><strong>Date début:</strong> {{ reservation.start_date }}</p>
+            <p><strong>Date fin:</strong> {{ reservation.end_date }}</p>
+            <p><strong>Prix par jour:</strong> {{ reservation.price_per_day }} MAD</p>
+            <p><strong>Nombre de jours:</strong> {{ total_days }}</p>
+            <p><strong>Coût total:</strong> {{ total_cost }} MAD</p>
+        </div>
+        <p>Merci pour votre confiance !</p>
+    </div>
+</body>
+</html>
